@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { AuthModule } from '@auth0/auth0-angular';
 
 import { LoginComponent } from 'src/app/components/login/login.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
