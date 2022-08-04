@@ -1,9 +1,7 @@
 package com.example.Urbantelegram.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -16,9 +14,14 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    public User(String username, String password) {
+    @OneToMany(mappedBy = "owner")
+    @Column(name = "chatrooms")
+    private List<Room> rooms;
+
+    public User(String username, String password, List<Room> rooms) {
         this.username = username;
         this.password = password;
+        this.rooms = rooms;
     }
 
     public String getUsername() {

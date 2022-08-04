@@ -1,5 +1,6 @@
 package com.example.Urbantelegram.services;
 
+import com.example.Urbantelegram.models.Room;
 import com.example.Urbantelegram.models.User;
 import com.example.Urbantelegram.repo.UserRepo;
 import org.junit.jupiter.api.Test;
@@ -7,6 +8,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -22,7 +25,10 @@ class UserServiceTest {
     @Mock
     UserRepo userRepo;
 
-    private User user = new User("username","password");
+    @Mock
+    List<Room> rooms;
+
+    private User user = new User("username","password", rooms);
 
     @Test
     public void createUser() {
