@@ -23,10 +23,9 @@ class UserControllerTest {
     @Mock
     UserService userService;
 
-    @Mock
-    List<Room> rooms;
 
-    private User user = new User("username","password", rooms);
+
+    private User user = new User("username","password");
 
     @Test
     void createUser() {

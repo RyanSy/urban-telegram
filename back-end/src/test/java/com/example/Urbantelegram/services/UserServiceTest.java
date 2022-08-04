@@ -25,10 +25,8 @@ class UserServiceTest {
     @Mock
     UserRepo userRepo;
 
-    @Mock
-    List<Room> rooms;
 
-    private User user = new User("username","password", rooms);
+    private User user = new User("username","password");
 
     @Test
     public void createUser() {

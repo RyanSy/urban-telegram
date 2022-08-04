@@ -15,13 +15,11 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "owner")
-    @Column(name = "chatrooms")
     private List<Room> rooms;
 
-    public User(String username, String password, List<Room> rooms) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.rooms = rooms;
     }
 
     public String getUsername() {
