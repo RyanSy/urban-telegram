@@ -38,4 +38,11 @@ class RoomControllerTest {
 
         verify(roomService).deleteRoom(room);
     }
+
+    @Test
+    void testGetRoomsByOwner(){
+        roomController.getRoomsByOwner(user);
+
+        verify(roomService).findByOwner(user);
+    }
 }
