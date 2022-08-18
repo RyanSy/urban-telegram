@@ -27,4 +27,8 @@ export class WebsocketService {
     });
   }
 
+  sendMessage(message, roomId: string){
+    this.stompClient.send('/app/send/message/' + roomId, {}, message);
+  }
+
 }
