@@ -8,12 +8,14 @@ import { AuthModule } from '@auth0/auth0-angular';
 
 import { LoginComponent } from 'src/app/components/login/login.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { ChatroomComponent } from './view/chatroom/chatroom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ChatroomComponent
   ],
   imports: [
     BrowserModule,
