@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('urban-telegram-front-end');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('urban-telegram-front-end app is running!');
-  });
 });

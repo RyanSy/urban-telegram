@@ -9,7 +9,10 @@ import { DOCUMENT } from '@angular/common';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) { }
+  constructor(
+    @Inject(DOCUMENT) public document: Document, 
+    public auth: AuthService
+    ) { }
 
   ngOnInit(): void {
   }
